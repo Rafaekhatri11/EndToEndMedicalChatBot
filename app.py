@@ -61,4 +61,6 @@ def chat():
 # [t.page_content for t in text_chunks],
 # embeddings,
 # index_name=index_name,
+
+
 # )   
