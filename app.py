@@ -46,6 +46,16 @@ def index():
 if __name__ == "__name__":
     app.run(debug=True)
 
+
+@app.route("/get", methods=["GET", "POST"])
+def chat():
+    msg = request.form["msg"]
+    input = msg
+    print(input)
+    result=qa({"query": input})
+    print("Response : ", result["result"])
+    return str(result["result"])
+
 # pinecone_store = PineconeVectorStore(embedding=embeddings, pinecone_api_key=PINECONE_API_KEY, index_name=index_name)
 # docsearch=pinecone_store.from_texts(
 # [t.page_content for t in text_chunks],
