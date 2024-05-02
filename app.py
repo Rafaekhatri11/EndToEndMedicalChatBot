@@ -59,6 +59,8 @@ def chat():
 # pinecone_store = PineconeVectorStore(embedding=embeddings, pinecone_api_key=PINECONE_API_KEY, index_name=index_name)
 # docsearch=pinecone_store.from_texts(
 # [t.page_content for t in text_chunks],
+
+
 # embeddings,
 # index_name=index_name,
 
